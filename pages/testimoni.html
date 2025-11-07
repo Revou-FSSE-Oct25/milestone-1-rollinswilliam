@@ -11,16 +11,44 @@
         <h1>MY WEB PORTOFOLIO</h1>
         <p>Welcome to my personal portofolio website!</p>
         <nav>
-            <a href="/milestone-1-rollinswilliam/index.html" style="color: black;">Home</a> |
-            <a href="/milestone-1-rollinswilliam/pages/about.html" style="color: black;" target="_blank" rel="noreferrer">Project</a> |
-            <a href="/milestone-1-rollinswilliam/pages/testimoni.html" style="color: black;">Testimonials</a>
+            <a href="/index.html" style="color: black;">Home</a> |
+            <a href="/pages/about.html" style="color: black;" target="_blank" rel="noreferrer">Project</a> |
+            <a href="/pages/testimoni.html" style="color: black;">Testimonials</a>
         </nav>
     </header>
     <!-- Main -->
     <main style="background-color: lightgray; padding: 30px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
-        <h1>Get in touch</h1>
+        <fieldset style="max-width: 800px; background-color: whitesmoke; margin: 0 auto; padding: 20px; border: 2px solid black; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+            <legend style="font-family:'Times New Roman', Times, serif; font-size: 7mm"><strong>Get in touch</strong></legend>
+        
         <p>If you have any testimonials or feedback about my portfolio website, please feel free to reach out to me. I would love to hear from you!</p>
-        <textarea rows="10" cols="50" placeholder="Write your testimonial here..."></textarea><br><br>
+        <fieldset style="border: 2px solid yellow; padding: 20px; margin-top: 30px;">
+                <legend style="color: black;">Your Information</legend>
+                
+                <label for="firstname">First Name:</label><br>
+                <input type="text" id="firstname" name="firstname" placeholder="Your First Name" style="width: 900px; padding: 10px;border: 1px solid black"><br><br>
+                <label for="lastname">Last Name:</label><br>
+                <input type="text" id="lastname" name="lastname" placeholder="Your Last Name" style="width: 900px; padding: 10px;border: 1px solid black"><br><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="Your Email Activation" style="width: 900px; padding: 10px;border: 1px solid black"><br><br>
+                <label for="phone">Phone Number:</label><br>
+                <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" style="width: 900px; padding: 10px;border: 1px solid black"><br><br>
+                
+                <p>I really appreciate your feedback and suggestions here:</p>
+                <textarea rows="10" cols="123" placeholder="Write your testimonial here..."></textarea><br><br>
+                
+                <label for="photo">Please upload a screenshot of the specific section you’d like me to improve.</label><br>
+                <input type="file" id="file" name="file" accept="image/*" style="border: 1px solid black; padding: 5px; margin-top: 10px;"><br><br>
+                <!-- submit and reset -->
+                <div style="text-align: center;"><button type="submit" style="background-color: blue; color: white; padding: 10px 20px; border: none; cursor: pointer;">Submit</button>
+                <button type="reset" style="background-color: lightblue black; padding: 10px 20px; border: 1px solid black; cursor: pointer;">Reset</button></div>
+                <p style="font-size: 12px; color: gray; margin-top: 10px;">*By submitting this form, you agree to let me store and process your data for testimonial purposes only.</p>
+        </fieldset>
     </main>
 </body>
+
+<!-- footer -->
+<footer style="background-color: yellow; padding: 50px; text-align: center; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; margin-top: 20px;">
+    <div><h1>To My Instructor-Module 1 (Sir Erlanda Zakaria). Thank you for all your guidance and teachings about HTML, GIT, Ai, Etc. — may kindness and good things always accompany you. :)</h1>
+    <img src="/images/1759449123649.png" alt="erlanda-zakaria" width="200" height="200"></div>
 </html>
