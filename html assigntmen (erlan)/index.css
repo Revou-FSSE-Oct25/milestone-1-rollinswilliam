@@ -7,22 +7,9 @@ html, body {
     margin: 0;
     color: #ffd700;
     list-style: none;
-    font-size: 16px;    
+    font-size: 18px;    
     background-color: rgb(35, 40, 69);
 
-}
-
-@media screen and (min-width: 320px){
-    body{
-        font-size: 1.5rem;
-        display: flex;
-        /* grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 0.6fr 1.8fr 0.8fr;
-        grid-template-areas:
-            'header header header'
-            'main main side'
-            'footer footer footer'; */
-}
 }
 
 html {
@@ -31,13 +18,13 @@ html {
 }
 
 body {
-    display: flex;
-    /* grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.6fr 1.8fr 0.8fr;
+        display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr;
     grid-template-areas:
         'header header header'
-        'main main main'
-        'footer footer footer'; */
+        'main main article'
+        'footer footer footer';
     /* border: 1px solid white; */
 }
 
@@ -70,6 +57,7 @@ header nav{
 }
 
 header nav a {
+    grid-area: header;
     border: 1px solid white;
     border-radius: 10px;
     padding: 10px 20px;
@@ -112,22 +100,20 @@ header nav a {
     transform: scale(1.3);
     transition: 2s;
 }
-
 main {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-areas: 
-        'article side';
-    width: 100%;
-    /* margin-top: 150px; */
-    /* display: flex;
-    flex-direction: row; */
+    /* background: #a36722;
+    background: radial-gradient(circle, rgba(163, 103, 34, 1) 2%, rgba(255, 224, 158, 1) 100%); */
+    margin-top: 170px;
+    /* border: 2px solid rgb(255, 255, 255); */
+    font-family: sans-serif, arial;
 }
 
 .card-a {
-    gap: 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
     margin: 0;
-    grid-area: article;
 }
 
 .card-b {
@@ -135,13 +121,12 @@ main {
     flex-direction: row;
     background-color:rgb(9, 13, 25);
     grid-area: footer;
-    
 }
 
 .container-p1-introduction {
     padding: 0px;
     margin: 0px;
-    grid-area: article;
+    grid-area: main;
     display: flex;
     font-size: 0.9rem;
 }
@@ -173,7 +158,7 @@ main {
     margin-left: auto;
     margin-right: auto;
     /* border-radius:50%; */
-    grid-area: article;
+    grid-area: main;
     object-fit:cover;
     width: 450px;
     height: 450px;
@@ -187,39 +172,40 @@ main {
     color: white;
 }
 
-/* side bar */
+
+footer {
+  grid-area: footer;
+  background-color:rgb(9, 13, 25);
+  color: white;
+
+}
+
+@media screen and (min-width: 768px){
+    body{
+        font-size: 1.5rem;
+}
+}
+
 .right-side {
-    /* position:absolute; */
-    padding: 0;
-    overflow: block;
+    position: relative;
+    padding: 20px;
+    overflow: visible;
     display: flex;
     flex-direction: row;
-    grid-area: side;
-    box-sizing: content-box;
+    grid: 'article';
+    box-sizing: border-box;
     width: 20%;
     border: 1px solid white;
-    /* margin-top: 100px; */
-    grid-column: side-start/side-end;
-    
-}
-
-.main-section-1 {
-    display: flex;
-    flex-direction: row;
-
-}
-
-.input-rs {
-
+   margin-top: 165px;
+    align-items: ;
 }
 
 .tabs {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 0.75rem;
     margin-bottom: 1rem;
     color: white;
-    align-items: center;
 }
 
 .tabs label {
@@ -234,6 +220,11 @@ main {
 .right input[type="radio"] {
   display: none;
 
+#tab-bio:checked ~ .tabs label[for="tab-bio"],
+#tab-project:checked ~ .tabs label[for="tab-project"],
+#tab-sosmed:checked ~ .tabs label[for="tab-sosmed"] {
+color: white;
+}
 
 .slides {
   position: relative;
@@ -250,19 +241,19 @@ main {
     opacity: 0.4s,
     transform: 0.4s;}
 
-#tab-bio:checked .slides .slide-bio {
+#tab-bio: checked ~ .slides .slide-bio {
   opacity: 1;
   transform: translateX(0);
   pointer-events: auto;
 }
 
-#tab-project:checked .slides .slide-project {
+#tab-project:checked ~ .slides .slide-project {
   opacity: 1;
   transform: translateX(0);
   pointer-events: auto;
 }
 
-#tab-sosmed:checked .slides .slide-sosmed {
+#tab-sosmed:checked ~ .slides .slide-sosmed {
   opacity: 1;
   transform: translateX(0);
   pointer-events: auto;
