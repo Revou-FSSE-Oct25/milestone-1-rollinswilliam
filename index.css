@@ -7,9 +7,8 @@ html, body {
     margin: 0;
     color: #ffd700;
     list-style: none;
-    font-size: 16px;    
+    /* font-size: 16px;     */
     background-color: rgb(35, 40, 69);
-
 }
 
 @media screen and (min-width: 320px){
@@ -32,13 +31,8 @@ html {
 
 body {
     display: flex;
-    /* grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.6fr 1.8fr 0.8fr;
-    grid-template-areas:
-        'header header header'
-        'main main main'
-        'footer footer footer'; */
-    /* border: 1px solid white; */
+    font-family: sans-serif;
+    font-size: 1rem;
 }
 
 header {    
@@ -54,17 +48,17 @@ header {
 
 .header-area{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items:center;
     padding: 0 50px 0 95px;
     grid-area: header;
     z-index: 1000;
     margin: 0;
+    gap: 190px;
 
 }
 
 header nav{
-    /* border: 1px solid black; */
     margin: 10px 10px;
     padding: 10px;
 }
@@ -115,10 +109,13 @@ header nav a {
 
 main {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: auto 15%;
     grid-template-areas: 
-        'article side';
+        'article side'
+        'footer footer';
     width: 100%;
+    /* padding: 0 100px; */
     /* margin-top: 150px; */
     /* display: flex;
     flex-direction: row; */
@@ -129,20 +126,14 @@ main {
     margin: 0;
     grid-area: article;
     display: flex;
-    margin-top: 160px;
+    margin-top: 80px;
     /* padding: 20px ; */
     justify-content: flex-end;
     align-items: center;
-
+    padding: 0 50px;
 }
 
-.card-b {
-    display: flex;
-    flex-direction: row;
-    background-color:rgb(9, 13, 25);
-    grid-area: footer;
-    
-}
+
 
 .container-p1-introduction {
     padding: 0px;
@@ -197,11 +188,10 @@ main {
     left: -12rem
 }
 
-.container-p1-introduction p {
+/* .container-p1-introduction p {
     /* margin: 0;
     font-size: 1rem;
     color: white; */
-}
 
 /* side bar */
 .right-side {
@@ -213,25 +203,22 @@ main {
     grid-area: side;
     box-sizing: content-box;
     width: 20%;
-    border: 1px solid white;
-    margin-top: 200px;
+    box-shadow: 6px 2px 7px 6px rgba(0, 0.1, 0, 0.1);
+    margin-top: 170px;
     width: 80%;
     height: 70%;
     justify-content: flex-start;
     align-items: center;
-    ;
+    border-radius: 10px;
     
 }
 
 .main-section-1 {
-    display: flex;
-    flex-direction: row;
+    /* display: flex;
+    flex-direction: row; */
 
 }
 
-.input-rs {
-
-}
 
 .tabs {
     display: flex;
@@ -257,35 +244,60 @@ main {
   display: none;
 }
 
-.slides {
+.slide-article {
   position: relative;
-  min-height: 100px;
+  height: 100px;
+  width: 310px;
+  text-align: center;
+  /* border: 1px solid white; */
 }
 
-.slide-article {
+.slides {
   position: absolute;
   inset: 0;
   opacity: 0;
   transform: translateX(20px);
   pointer-events: none;
-  transition:
-    opacity: 0.4s,
-    transform: 0.4s;}
-
-#tab-bio:checked .slides .slide-intro :hover {
-  opacity: 1;
-  transform: translateX(0);
-  pointer-events: auto;
+  transition: opacity 0.4s, transform 0.4s;
 }
 
-#tab-project:checked .slides .slide-bio: :hover {
+#tab-intro:checked ~ .slide-article .slide-intro {
   opacity: 1;
   transform: translateX(0);
   pointer-events: auto;
+  /* transition: 2s; */
 }
 
-#tab-sosmed:checked .slides .slide-socmed: :hover {
+#tab-bio:checked ~ .slide-article .slide-bio {
   opacity: 1;
   transform: translateX(0);
   pointer-events: auto;
+  /* transition: 1s; */
+}
+
+#tab-socmed:checked ~ .slide-article .slide-socmed {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+  /* transition: 1s;  */
+}
+
+.footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: space-around;
+    padding: 3rem;
+    margin: 0;
+    background-color: rgb(8, 12, 25);
+    align-items: center;
+    width: 100%;
+}
+
+.footer-article-1 {
+    /* border: 1px solid white; */
+    /* grid-area: footer; */
+}
+
+.footer-article-2 {
+    /* grid-area: footer; */
 }
