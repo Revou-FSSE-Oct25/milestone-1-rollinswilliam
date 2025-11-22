@@ -197,7 +197,7 @@ footer {
     width: 20%;
     border: 1px solid white;
    margin-top: 165px;
-    align-items: ;
+    align-items: center;
 }
 
 .tabs {
@@ -218,7 +218,7 @@ footer {
 }
 
 .right input[type="radio"] {
-  display: none;
+  display: none;}
 
 #tab-bio:checked ~ .tabs label[for="tab-bio"],
 #tab-project:checked ~ .tabs label[for="tab-project"],
@@ -237,9 +237,7 @@ color: white;
   opacity: 0;
   transform: translateX(20px);
   pointer-events: none;
-  transition:
-    opacity: 0.4s,
-    transform: 0.4s;}
+  transition: opacity 0.4s, transform 0.4s;}
 
 #tab-bio: checked ~ .slides .slide-bio {
   opacity: 1;
@@ -258,3 +256,4 @@ color: white;
   transform: translateX(0);
   pointer-events: auto;
 }
+
