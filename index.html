@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/Style/mediascreen.css">
     <title>Milestone 1 - D'Rollins William</title>
+    <!-- GoogleFont -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -12,15 +17,15 @@
         <div class="header-area" id="header" style="border-bottom: 1 solid black;">
             <img src="/images/1759449123649.png" alt="logo-drw" class="logo-drw">
             <nav class="nav-header">
-                <a href="index.html" class="home-button">Home</a> |
-                <a href="pages/project.html" target="_blank" rel="noreferrer" class="project-button">Project</a> |
-                <a href="pages/testimoni.html"  target="_blank" rel="noreferrer" class="testimoni-button">Testimonials</a>
+                <a href="#section-1" class="home-button">Home</a> |
+                <a href="#section-2" class="project-button">Project</a> |
+                <a href="#section-3" class="testimoni-button">Testimonials</a>
             </nav>
         </div>
     </header>
 
     <main>
-        <!-- <section class="main-section-1"> -->
+        <section class="main-section-1" id="section-1">
             <!-- card-a -->
             <div class="card-a">
                 <article class="article-p1">
@@ -50,19 +55,58 @@
                     </article>
 
                     <article class="slides slide-bio">
-                        <h3>Bio</h3>
-                        <p>ini saya</p>
-                        <table>
+                        <h3>Here’s my short bio</h3>
+                       <table>
+                            <thead>
+                                <tr>
+                                <th scope="col">Full Name</th>
+                                </tr>
+                                <tr>
+                                <th scope="col">Born</th>
+                                </tr>
+                                <tr>
+                                <th scope="col">Education</th>
+                                </tr>
+                                <tr>
+                                <th scope="col">Role/Profession</th>
+                                </tr>
+                                <tr>
+                                <th scope="col">Hobbies</th>
+                                </tr>
+                                <tr>
+                                <th scope="col">Core Skills</th>
+                                </tr>
+                            </thead>
 
+                            <tbody>
+                                <tr>
+                                    <td scope="row">:D'rollins William</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">:Pomalaa, 27 May 1998</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">:Bachelor's Degree in Geography Education, State University of Makassar</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">:Software Engineer & Geospatial Enthusiast</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">:Gaming, Reading Books, Watching Movies, Playing Badminton</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">:React, JavaScript, HTML, GIS, Data Visualization, Editor.</td>
+                                </tr>
+                            </tbody>
                         </table>
                     </article>
 
                     <article class="slides slide-socmed">
                         <h3>Connect with me in my Social Media</h3>
-                        <nav>   
-                            <a href="https://www.linkedin.com/in/d-rollins-william-093827241/"><img src="images/LinkedIn_logo_initials.png" alt="linkedin_icon" width="30" height="30"></a>
-                            <a href="https://web.facebook.com/Droll.inks"><img src="images/Facebook_f_logo_(2019).svg.png" alt="facebook_icon" width="30" height="30"></a>
-                            <a href="https://www.instagram.com/drollins_w/"><img src="images/Instagram_icon.png" alt="instagram_icon" width="30" height="30"></a>
+                        <nav class="social-media">   
+                            <a href="https://www.linkedin.com/in/d-rollins-william-093827241/"><img src="images/LinkedIn_logo_initials.png" alt="linkedin_icon" id="linkedin" width="30" height="30"></a>
+                            <a href="https://web.facebook.com/Droll.inks"><img src="images/Facebook_f_logo_(2019).svg.png" alt="facebook_icon" id="facebook" width="30" height="30"></a>
+                            <a href="https://www.instagram.com/drollins_w/"><img src="images/Instagram_icon.png" alt="instagram_icon" id="instagram" width="30" height="30"></a>
                         </nav>
                     </article>
                 </div>
@@ -78,16 +122,101 @@
                     <h4>Your Attitude Determine Your Altitude</h4>
                 </article>
             </div>
+        </section>
 
+        <section class="main-section-2" id="section-2">
+            <fieldset class="fieldset-sec-2">
+                <legend><h2>Completed Mini Assignment W0-W2</h2></legend>
+                
+                    <div>
+                        <nav>
+                            <p>I was taught how to create markdown and to get familiar with the CLI and Terminal. This is my
+                            <a href="https://github.com/rollinswilliam/Simpel-Markdown">Repository</a> and
+                            <a href="https://rollinswilliam.github.io/Simpel-Markdown/">Deployment</a></p>
+                        </nav>
+                    <p class="ps2">- W0</p>
+                    </div>
+
+                    <div>
+                        <ol class="assignment-list">
+                            <li>Developed HTML layouts for basic web structure.
+                                <nav>This is my
+                                    <a href="https://github.com/rollinswilliam/Belajar-HTML">Repository</a> and
+                                    <a href="https://rollinswilliam.github.io/Belajar-HTML/">Deployment</a>
+                                </nav>
+                            </li>
+                        
+                            <li>Implemented semantic HTML for better accessibility and SEO.
+                                <nav>This is my
+                                    <a href="https://github.com/rollinswilliam/Belajar-HTML-Semantic">Repository</a> and
+                                    <a href="https://rollinswilliam.github.io/Belajar-HTML-Semantic/">Deployment</a>
+                                </nav>
+                            </li>
+
+                            <li>Learned Git collaboration workflows (branching, merging, pushing, and pull requests).
+                                <nav> This is my
+                                <a href="https://github.com/rollinswilliam/git-collaboration-simulation"></a>
+                            <li>Built interactive forms and responsive data tables using HTML.
+                                <nav> This is my
+                                    <a href="https://github.com/rollinswilliam/Belajar-HTML-Form">Repository</a> and
+                                    <a href="https://rollinswilliam.github.io/Belajar-HTML-Form/">Deployment</a>
+                                </nav>
+                            </li>
+                        </ol>
+                        <p class="ps2">- W1</p>
+                    </div>
+
+                    <div>
+                        <nav> Building HTML x Git Collaboration (Team 5; rollins, zaid, and livia). This is our
+                            <a href="https://github.com/Zaid-TeamTwo/collab-porto">Repository</a> and
+                            <a href="https://zaid-teamtwo.github.io/collab-porto/">Deployment</a>
+                        </nav>
+                        <p class="ps2">- W2</p>
+                    </div>
+            </ol>
+        </section>
+
+        <section class="main-section-3" id="section-3">
+            <fieldset class="fieldset-sec-3">
+                <legend><strong>Get in touch</strong></legend>
+                <p>If you have any testimonials or feedback about my portfolio website, please feel free to reach out to me. I would love to hear from you!</p>
+                    <fieldset>
+                        <legend>Your Information</legend>
+                        <form class="form-getintouch">
+                            <div class="form-information">  
+                                <label for="firstname">First Name:</label>
+                                <input type="text" id="firstname" name="firstname" placeholder="Your First Name" required >
+                                <label for="lastname">Last Name:</label>
+                                <input type="text" id="lastname" name="lastname" placeholder="Your Last Name" >
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" placeholder="Your Email Activation">
+                                <label for="phone">Phone Number:</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Your Phone Number">
+                            </div>
+                            <div>
+                                <p>I really appreciate your feedback and suggestions here:</p>
+                                <textarea rows="10" cols="123" placeholder="Write your testimonial here..."></textarea>
+                                
+                                <label for="photo">Please upload a screenshot of the specific section you’d like me to improve.</label><br>
+                                <input type="file" id="file" name="file" accept="image/*">
+                                
+                            
+                                <div>
+                                    <button type="submit">Submit</button>
+                                    <button type="reset">Reset</button>
+                                </div>
+                                <p>*By submitting this form, you agree to let me store and process your data for testimonial purposes only.</p>
+                            </div>  
+                        </form> 
+                    </fieldset>
+        </section> 
     </main>
 
     <!-- <footer>
         <article>
         <p>&copy; 2025 D'Rollins William. All rights reserved.</p>
-        <address>Contact me: <a href="mailto:rollinswilliam21@gmail.com" id="email" style="color: black;">rollinswilliam21@gmail.com</a></address>
+        <address>Contact me: <a href="mail to: rollinswilliam21@gmail.com" id="email" style="color: black;">rollinswilliam21@gmail.com</a></address>
         <p><strong><i>Morowali. Indonesia</i></strong></p>
-        <nav>
-        <a href="#header" style="color: black;">Top pages</a>
-    </nav>
     </footer> -->
 </body>
+</html>

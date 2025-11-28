@@ -1,34 +1,82 @@
-# Milestone 1 – Personal Portfolio Website
+# Portofolio Pribadi - D'Rollins William
 
-## 1) Overview of the website
-- Halaman utama: kalimat pengantar, foto, sosial media, short biodata, CV, dan skill yang saya miliki saat ini.
-- Navigasi ke setiap halaman:
-  - Home: halaman utama
-  - About/Project: ringkasan mini assignment (W0–W2) beserta tautan repository dan deployment terkait.
-  - Testimoni/saran/kritik: halaman form sederhana untuk mengirimkan testimoni/masukan (teks, email, nomor telp, unggah gambar) dengan tombol Submit/Reset.
-- Struktur halaman konsisten dengan elemen html; head, body (header, main, dan Footer), footer.
+## 🌟 Gambaran Umum
+Website portofolio pribadi yang menampilkan profil, proyek, dan formulir testimoni. Dibangun dengan pendekatan mobile-first dan desain responsif untuk pengalaman pengguna yang optimal di berbagai perangkat.
 
----
+## ✨ Fitur yang Diterapkan
 
-## 2) Features implemented
-1. Navigasi multi-halaman: Home, Project (About), dan Testimonials yang saling terhubung, serta anchor kembali ke bagian atas halaman (untuk halaman utama saja):
-  -Navigasi home ke project dan testimonials akan membuka halaman baru, namun home ke home akan merefresh halaman.
-  -Navigasi project ke testimonials akan membuka halaman baru, namun project ke project akan merefresh halaman, project ke home akan membuka dihalaman yang sama.
-  -Navigasi testimonials ke project akan membuka halaman baru, namun testimonials ke testimonials akan merefresh halaman, testimonials ke home akan membuka dihalaman yang sama.
-2. Komponen hero/pengenalan dengan foto profil berbentuk bulat dan sapaan singkat.
-3. Tautan media sosial lengkap dengan ikon (LinkedIn, Facebook, Instagram).
-4. Biodata dalam bentuk TABEL yang memuat nama lengkap, tanggal lahir, pendidikan, peran, hobi, dan core skills.
-5. Tombol DOWNLOAD untuk CV yang mengarah ke mendownload berkas PDF di folder assets/dokumen.
-6. Daftar Skills ditampilkan menggunakan list di dalam FIELDSET yang telah diberi label/legend.
-7. Halaman Project (About) yang merangkum progres tugas dan menyediakan link repo + deployment eksternal.
-8. Halaman Testimonials berisi form input (teks, email, dan nomor telpon), kotak komentar (textarea), unggah berkas gambar, tombol Submit/Reset, serta catatan kecil untuk persetujuan penggunaan data.
-9. Atribut seperti alt pada gambar untuk aksesibilitas dasar.
+### 1. Navigasi
+- Header tetap dengan efek scroll yang halus
+- Navigasi antar bagian yang responsif
+- Desain minimalis dengan warna yang konsisten
+- Menggunakan radio button yang dikombinasikan dengan Transform - TransposeX
+- Animasi Transform dan transisi pada header
+![Transform-transisi](/images/WhatsApp%20Image%202025-11-29%20at%2000.23.26.jpeg)
 
----
+### 2. Halaman Beranda
+- **Profil Diri**:
+  - Foto profil dengan desain modern
+  - Tab interaktif untuk konten yang terorganisir
+  - Informasi biodata dalam format tabel
+  - Tautan media sosial yang mudah diakses
 
-## 3) Technologies used
-- HTML5 sebagai teknologi utama untuk struktur dan konten.
-- Aset statis: gambar (images) dan dokumen PDF CV (assets).
+### 3. Bagian Proyek
+- Tampilan tugas mingguan (W0-W2)
+- Setiap proyek menampilkan:
+  - Deskripsi singkat
+  - Teknologi yang digunakan
+  - Tautan ke repositori GitHub
 
----
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/KTVBmApB)
+### 4. Formulir Testimoni
+- Formulir kontak interaktif dengan validasi
+- Beberapa jenis input:
+  - Teks (nama, email, pesan)
+  - Unggah file
+  - Tombol submit dan reset
+- Desain form yang user-friendly
+
+### 5. Desain Responsif
+- Layout yang beradaptasi dengan berbagai ukuran layar
+- Penggunaan media queries untuk pengalaman optimal
+- Gambar dan elemen yang diskalakan dengan baik
+
+## 🛠️ Teknologi yang Digunakan
+
+### Frontend
+- **HTML5**: Struktur semantik
+- **CSS3**:
+  - Flexbox untuk tata letak fleksibel
+  - Grid untuk layout yang kompleks
+  - Variabel CSS untuk konsistensi warna
+  - Transisi dan animasi halus
+  - Media queries untuk responsivitas
+
+  ![flex-grid](/images/flex&grid.jpeg)
+
+### Tools & Layanan
+- **Google Fonts**: Menggunakan font Inter
+- **VS Code**: Editor kode utama
+- **Git & GitHub**: Version control dan hosting
+
+### Teknik Layout
+- **Flexbox**:
+  - Navigasi header
+  - Tata letak kartu proyek
+  - Formulir yang responsif
+  - Footer yang seimbang
+
+- **CSS Grid**:
+  - Layout utama halaman
+  - Grid area untuk bagian proyek
+  - Tata letak yang konsisten di berbagai perangkat
+
+## 🎨 Skema Warna
+- Warna utama: `rgb(35, 40, 69)` (Biru tua)
+- Warna aksen: `#ffd700` (Emas)
+- Teks: Putih dan nuansa abu-abu terang
+- Latar belakang: Gelap dengan kontras yang baik
+
+## 📱 Kompatibilitas
+- Kompatibel dengan browser modern (Chrome, Firefox, Safari, Edge)
+- Masih Responsif di perangkat mobile, tablet, dan desktop (maaf masih ongoing)
+- Performa optimal dengan ukuran file yang ringan
