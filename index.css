@@ -4,24 +4,11 @@
 
 html, body {
     height: 100%;
+    width: 100%;
     margin: 0;
     color: #ffd700;
-    list-style: none;
-    /* font-size: 16px;     */
+    list-style: none;  
     background-color: rgb(35, 40, 69);
-}
-
-@media screen and (min-width: 320px){
-    body{
-        font-size: 1.5rem;
-        display: flex;
-        /* grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 0.6fr 1.8fr 0.8fr;
-        grid-template-areas:
-            'header header header'
-            'main main side'
-            'footer footer footer'; */
-}
 }
 
 html {
@@ -30,10 +17,14 @@ html {
 }
 
 body {
-    display: flex;
-    font-family: sans-serif;
-    font-size: 1rem;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    /* font-weight: <weight>; */
+    font-style: normal;
+    font-size: 1.2rem; 
 }
+
+
 
 header {    
     padding: 0;
@@ -51,11 +42,8 @@ header {
     justify-content: space-around;
     align-items:center;
     padding: 0 50px 0 95px;
-    grid-area: header;
     z-index: 1000;
     margin: 0;
-    gap: 190px;
-
 }
 
 header nav{
@@ -64,14 +52,18 @@ header nav{
 }
 
 header nav a {
+    max-width: 100%;
+    width: 20vw;
+    height: 20vh;
     border: 1px solid white;
     border-radius: 10px;
     padding: 10px 20px;
     color: white;
     text-decoration: none;
-    margin: 10px;
+    /* margin: 10px; */
     /* align-items: first baseline; */
     font-size: 1rem;
+    gap: 10px
 }
 
 .home-button:hover{
@@ -97,8 +89,9 @@ header nav a {
 
 /* logo */
 .logo-drw { 
-    width: 155px;
-    height: 155px;
+    max-width: 100%;
+    width: 10vw;
+    height: 20vh;
     display: center;
 }
 
@@ -108,17 +101,15 @@ header nav a {
 }
 
 main {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    grid-template-rows: auto 15%;
-    grid-template-areas: 
-        'article side'
-        'footer footer';
-    width: 100%;
+    
+    max-width: 100%;
+    max-height: 100%;
     /* padding: 0 100px; */
     /* margin-top: 150px; */
     /* display: flex;
-    flex-direction: row; */
+    flex-direction: column; */
+    font-size: 1.2rem;
+    
 }
 
 .card-a {
@@ -126,11 +117,11 @@ main {
     margin: 0;
     grid-area: article;
     display: flex;
-    margin-top: 80px;
+    margin-top: 100px;
     /* padding: 20px ; */
     justify-content: flex-end;
     align-items: center;
-    padding: 0 50px;
+    padding: 0 0 0 0px;
 }
 
 
@@ -163,9 +154,9 @@ main {
 
 .article-p1 {
     /* border: 1px solid white; */
-    padding: 0 0 0 100px;
+    padding: 0 0 0 50px;
     margin: 0;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: white;
     grid-area: article;
     color: black;
@@ -175,17 +166,16 @@ main {
 }
 
 .img-1 {
-    margin-left: auto;
-    margin-right: auto;
     /* border-radius:50%; */
     grid-area: article;
     object-fit:cover;
-    width: 450px;
-    height: 450px;
+    width: 455px;
+    height: 455px;
     overflow:clip;
+    max-width: 100%;
     margin: 0;
     position: relative;
-    left: -12rem
+    left: -200px
 }
 
 /* .container-p1-introduction p {
@@ -201,33 +191,63 @@ main {
     display: flex;
     flex-direction: column;
     grid-area: side;
-    box-sizing: content-box;
+    box-sizing: border-box;
     width: 20%;
     box-shadow: 6px 2px 7px 6px rgba(0, 0.1, 0, 0.1);
     margin-top: 170px;
-    width: 80%;
+    width: 90%;
     height: 70%;
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
     align-items: center;
     border-radius: 10px;
+    max-width: 100%;
     
 }
 
 .main-section-1 {
     /* display: flex;
-    flex-direction: row; */
+    flex-direction: column; */
+    scroll-snap-align: start;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: auto 15%;
+    grid-template-areas: 
+        'article side'
+        'footer footer';
+    margin: 0;
+    padding: 0;
+}
+
+.main-section-2 {
+    scroll-snap-align: start;
+    height: 100vh;
+    align-content: center;
 
 }
 
+.main-section-3 {
+    scroll-snap-align: start;
+    height: 100vh;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column-reverse;
+
+}
+
+.fieldset-sec-2{
+    margin: 0 10px 0 10px;
+}
 
 .tabs {
     display: flex;
     flex-direction: row;
-    gap: 0.75rem;
-    margin-bottom: 1rem;
+    gap: 0.5rem;
+    margin-bottom: 1px;
     color: white;
     align-items: center;
     justify-content: center;
+    font-size: 2rem;
 }
 
 .tabs label {
@@ -246,8 +266,8 @@ main {
 
 .slide-article {
   position: relative;
-  height: 100px;
-  width: 310px;
+  height: 20vw;
+  width: 40vh;
   text-align: center;
   /* border: 1px solid white; */
 }
@@ -300,4 +320,100 @@ main {
 
 .footer-article-2 {
     /* grid-area: footer; */
+}
+
+.social-media {
+    display: flex;
+    flex-direction: column;
+    /* gap: 2px; */
+
+}
+
+.social-media img{
+    max-width: 100%;
+    max-height: 100%;
+    width: 50px;
+    height: 50px;
+}
+
+.fieldset-sec-2 {
+    display: flex;
+    flex-direction:row;
+    /* margin-top: 100px; */
+    padding: 0;
+    font-size: 1rem;
+    gap: 20px;
+    margin: 0;
+    width: 100%;
+    font-size: 0.8em; 
+}
+
+.ps2 {
+    text-align: end;
+    padding: 20px;
+    font-style: italic;
+
+}
+
+.assignment-list {
+    /* padding: 10px; */
+    margin: 0;
+}
+
+.fieldset-sec-2 p, .fieldset-sec-2 a{
+    margin: 0;
+    flex-wrap: wrap;
+    text-decoration: none;
+    padding: 10px;
+    color:#ffd700;
+}
+
+thead {
+    display: flex;
+    flex-direction: column;
+}
+
+table {
+    position: relative;
+    left: -90px;
+    display:flex ;
+    flex-direction: row;
+    font-size: 0.7rem;
+    gap: 10px;
+    border-collapse: collapse;
+    margin: 1.5rem auto 0;
+    width: 35vw;
+}
+
+tbody {
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.form-getintouch {
+    display: flex;
+    flex-direction: column ;
+}
+
+.form-information {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+th, td{
+    height: 32px;
+}
+
+td {
+    width: 30vw;
+    text-align: justify;
+
+}
+
+.fieldset-sec-3 {
+    margin: 0;
+    padding: 0;
 }
